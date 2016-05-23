@@ -73,7 +73,7 @@ namespace Ball
                     results.Add(word);
                 }
             });
-            foreach(string result in results.Distinct())
+            foreach(string result in results.Distinct().OrderByDescending(r => r.Length))
             {
                 txtResults.Text += result + ",   ";
             }

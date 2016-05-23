@@ -30,7 +30,13 @@ namespace Ball
                         {
                             var parts = line.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
                             var part = parts[0];
-                            words.Add(part);
+                            if (parts.Length == 2)
+                            {
+                                if (!parts[1].Contains("Y"))
+                                {
+                                    words.Add(part);
+                                }
+                            }
                         }
                     }
 
