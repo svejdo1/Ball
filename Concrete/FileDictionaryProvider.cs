@@ -42,6 +42,10 @@ namespace Barbar.Ball.Concrete
                         }
                         var parts = line.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
                         var part = parts[0];
+                        if (parts.Length > 1 && parts[1].Contains("Y"))
+                        {
+                            continue;
+                        }
                         words.Add(part);
                     }
                 }
